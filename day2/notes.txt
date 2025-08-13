@@ -1,0 +1,27 @@
+Arithmetic operators:
++, *, /,//, %, -
+
+binary numbers= 0,1
+octal numbers+ 0-7
+hexadecimal number= 0-15
+
+signed and unsigned numbers have different values in binary
+
+NOTE: 5 + 6.055 (this can't solved directly because floating point numbers are stored differently according to IEEE standards)
+
+Relational operators
+<,>,<=,>=,!=,==
+i/p is numbers
+o/p is boolean
+have higher precedence than logical operators but lesser than arithmetic operators
+ 
+intervals:
+ [10,20]  closed intervals
+ (10,20)  open intervals
+
+Logical operators:
+ and, or, not (python)
+ &, &&, ||, |, ! (c,c++,java,c#)
+
+ i/p and o/p both are boolean
+ right to left associativity

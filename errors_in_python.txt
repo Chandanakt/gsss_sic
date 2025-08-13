@@ -1,0 +1,7 @@
+Errors in Python: (define it with examples)
+
+* Synthax Error
+* Name Error 
+* Index Error
+* Value Error
+* 
