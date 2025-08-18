@@ -7,7 +7,9 @@ What is pip3 and pythonic ?
 dev.mosilla --html, css, javascript
 docx.python.org  --python
 docx.oracle  ---java
-
+Can we modify a list which is an element in tuple ?
+Why argv[0] stores file name ?
+Why in python there is no implicit typecasting?
 
 ASSIGNMENTS:
 

@@ -1,0 +1,1 @@
+map is to accesss all the elements in the list

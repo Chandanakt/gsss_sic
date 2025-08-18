@@ -4,4 +4,5 @@ Errors in Python: (define it with examples)
 * Name Error 
 * Index Error
 * Value Error
-* 
+* Type Error
+* Zero Division Error
