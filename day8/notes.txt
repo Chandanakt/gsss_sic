@@ -1,0 +1,4 @@
+API
+verb are:
+GET (along with ID)
+POST, DELETE
