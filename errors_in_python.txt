@@ -1,8 +1,51 @@
 Errors in Python: (define it with examples)
 
-* Synthax Error
-* Name Error 
-* Index Error
-* Value Error
-* Type Error
-* Zero Division Error
+* Synthax Error: A SyntaxError occurs when the Python interpreter finds a structural problem with your code, meaning it doesn't follow the rules of the language. This type of error is detected before the program runs. It often results from a typo, a missing colon, or mismatched parentheses.
+
+        Example:
+                if 5 > 2
+                   print("Correct") 
+
+In this example, a SyntaxError occurs because of the missing colon (:) at the end of the if statement
+
+
+* Name Error: A NameError occurs when you try to use a variable or function name that hasn't been defined. The interpreter doesn't recognize the name you're calling.
+
+        Example:
+                message = "Hello, World!"
+                print(mesage)
+
+Here, a NameError is raised because mesage is not a defined variable; it should have been message
+
+
+* Index Error: An IndexError occurs when you try to access an index of a sequence (like a list, tuple, or string) that is outside the valid range. In Python, sequences are zero-indexed, meaning the first element is at index 0.
+
+        Example:
+                my_list = [10, 20, 30]
+                print(my_list[3])
+
+This code will cause an IndexError because the list has only three elements, with indices 0, 1, and 2. There is no index 3
+
+
+* Value Error: A ValueError is raised when a function receives an argument of the correct data type but an inappropriate value. For instance, trying to convert a string that isn't a valid number into an integer.
+
+        Example:
+                int("hello")
+
+This raises a ValueError because the string "hello" cannot be converted into an integer
+
+
+* Type Error: A TypeError occurs when an operation or function is applied to an object of an inappropriate type. It means you're trying to do something that is not supported for that data type, like adding a number to a string.
+
+        Example:
+                result = "5" + 10
+
+This example will result in a TypeError because you can't concatenate a string and an integer directly.
+
+
+* Zero Division Error: A ZeroDivisionError occurs when you try to divide a number by zero. This is a mathematical impossibility, and Python raises this error to prevent the program from crashing.
+
+        Example:
+                result = 100 / 0
+                
+This code will raise a ZeroDivisionError because division by zero is an undefined operation
