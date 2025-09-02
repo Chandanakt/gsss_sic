@@ -1,17 +1,120 @@
-How floating point numbers are stored using IEEE standards?
-Which are the 2 most important relational operators?
-Learn output formating in python.
-Why in Python we do not have increment and decrement?
-Learn about __main___ 
-What is pip3 and pythonic ?
-dev.mosilla --html, css, javascript
-docx.python.org  --python
-docx.oracle  ---java
-Can we modify a list which is an element in tuple ?
-Why argv[0] stores file name ?
-Why in python there is no implicit typecasting?
-Good examples and bad examples of list?
-List methods (list.)
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+1) How floating point numbers are stored using IEEE standards?
+
+-->  Floating-point numbers, as defined by the IEEE 754 standard, are stored in a format that represents a number using three main components: a sign bit, an exponent, and a significand (also known as the mantissa). This is analogous to scientific notation, but in binary. The number is calculated using the formula:
+
+
+(−1)**8×c×b**q
+ 
+
+Where:
+
+s is the sign bit.
+c is the significand.
+b is the base (typically 2 for binary).
+q is the exponent
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+2) Which are the 2 most important relational operators?
+
+--> The two most important relational operators are equality (==) and inequality (!=). While there are other important relational operators like "less than" (<) and "greater than" (>), equality and inequality are arguably the most fundamental because they are used to test for a direct match or a lack thereof, which is a very common operation in programming.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+3) Output formating in python.
+
+--> Python offers several ways to format strings for output. The most common methods are:
+
+f-strings: The modern, recommended method for its readability and speed.
+
+str.format(): A versatile method that uses curly braces {} as placeholders.
+
+The % operator: An older, less flexible method, generally avoided in new code.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+4) Why in Python we do not have increment and decrement?
+
+--> We do not have ++ and -- increment/decrement operators in Python because they can lead to ambiguous and hard-to-read code. Python's design philosophy prioritizes explicitness, simplicity, and readability.
+
+Instead of a single-character shorthand, Python uses compound assignment operators like += 1 and -= 1, which are clearer and do exactly what they say. This approach also aligns with how integers are handled in Python as immutable objects, meaning that an operation like x += 1 creates a new integer object rather than modifying the original one in place.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+5) About __main___ 
+
+--> __main__ is a special variable in Python that holds the name of the current scope. When a Python file is run directly, its __name__ variable is automatically set to '__main__'. This allows a common conditional block, if __name__ == "__main__":, to be used to execute code only when the script is the main program, not when it's imported as a module by another script. This is crucial for creating reusable modules and organizing code.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+6) What is pip3 and pythonic ?
+
+--> pip3
+pip3 is a package manager for Python 3. It's used to install and manage software packages (libraries, frameworks, and tools) written in Python. It downloads packages from the Python Package Index (PyPI) and handles their dependencies, making it easy to add new functionality to your projects. pip3 is the standard tool for managing Python 3 packages, distinguishing it from pip, which is often associated with older Python 2 installations.
+
+Pythonic is a term used to describe code that follows the best practices, conventions, and design principles of the Python language. It refers to code that is not only functional but also clear, concise, and easy to read, as if it were written by an experienced Python programmer. 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+7) Can we modify a list which is an element in tuple ?
+
+--> Yes, we can modify a list that is an element inside a tuple.
+
+This is possible because while a tuple is immutable (meaning you cannot add, remove, or replace its elements), the objects it contains are not necessarily immutable themselves. A tuple only stores references to its elements. The list inside the tuple is a mutable object, and its contents can be changed even though the tuple's structure itself cannot.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+8) Why argv[0] stores file name ?
+
+--> argv[0] stores the filename because it is a convention in many programming languages, including C and Python, to place the name of the executable or script as the first argument in the command-line argument list. This practice allows a program to know its own name, which can be useful for various purposes, such as printing usage instructions or error messages.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+9) Why in python there is no implicit typecasting?
+
+--> Python avoids implicit typecasting to prevent unexpected behavior and maintain code clarity. The language's philosophy of "explicit is better than implicit" means programmers must manually convert data types, making the code's intent obvious. This helps prevent subtle bugs that can arise from automatic conversions, such as adding a number to a string and getting an error instead of an unpredictable result
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+10) Good examples and bad examples of list
+
+--> Good Examples:
+Good examples of lists are readable, efficient, and consistent.
+
+List Comprehensions: These are a concise and fast way to create a new list. For example, squares = [x**2 for x in range(5)] creates a list of squares more efficiently than a traditional for loop.
+
+Consistent Data Types: Storing elements of the same type, like a list of strings names = ["Alice", "Bob"], makes your code predictable and prevents errors.
+
+Meaningful Names: Using descriptive variable names like student_scores helps others (and your future self) understand the code's purpose.
+
+Bad Examples: 
+Bad examples are unclear, inefficient, or misuse the data structure.
+
+Mixed Data Types: A list with different data types, like data = [1, "apple", True], makes the code confusing and hard to manage.
+
+Inefficient Operations: Using a list as a queue and relying on pop(0) is slow for large lists because it requires re-indexing every element. A deque from the collections module is a better choice for this.
+
+Misusing for Complex Data: Storing structured data in nested lists, such as person = ["John", 30], is a bad practice. A dictionary, like person = {"name": "John", "age": 30}, is much clearer and more accessible.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+11) List methods
+
+--> Modifying Methods
+These methods change the list in place.
+
+append(element): Adds a single element to the end of the list.
+
+extend(iterable): Adds all elements from an iterable (like another list, tuple, or string) to the end of the list.
+
+insert(index, element): Inserts an element at a specified index.
+
+remove(value): Removes the first occurrence of a given value from the list. It raises a ValueError if the value is not found.
+
+pop([index]): Removes and returns the element at a specified index. If no index is given, it removes and returns the last element.
+
+clear(): Removes all elements from the list, making it empty.
+
+reverse(): Reverses the order of the elements in the list in place.
+
+sort(key=None, reverse=False): Sorts the list in place. You can use optional arguments to customize the sorting order.
+
+Accessing & Counting Methods
+These methods do not modify the list.
+
+index(value, [start, end]): Returns the index of the first occurrence of a value. You can specify a range to search within. It raises a ValueError if the value is not found.
+
+count(value): Returns the number of times a value appears in the list.
+
+copy(): Returns a shallow copy of the list. This creates a new list object with the same elements, so changes to the new list don't affect the original.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+NOTE:  dev.mosilla --html, css, javascript
+       docx.python.org  --python
+       docx.oracle  ---java
 
 ASSIGNMENTS:
 
@@ -40,100 +143,9 @@ Accept a number and implement following programs:
 	5. Find sum of composite digits of the number.
 
 -------------------------------------
-Taxation Problem:
 
-Tax Calculator Problem
-GlobalNext Solutions, a rapidly growing IT company, employs a diverse workforce ranging from entry-
-level developers to senior executives. The HR department wants to streamline the tax calculation
-process for employees under the New Tax Regime (2023). They’ve decided to build a tax calculation
-program that computes salaries, taxes, and net incomes while ensuring compliance with the latest tax
-laws.
-As a software developer in GlobalNext’s HR-Tech team, you are tasked with developing this program.
-The system should process employee salary details, validate inputs, calculate taxes, and generate
-detailed reports.
-The program should:
-1. Accept employee details, including monthly salary components.
-2. Calculate gross and taxable income according to the New Tax Regime (2023).
-3. Compute the tax payable using the appropriate tax slabs.
-4. Apply any applicable standard deductions and rebates.
-5. Generate reports detailing gross salary, taxable income, tax payable, and net salary.
-Level 1: Basic Input and Salary Calculation
-Objective: Capture employee details and calculate the gross salary.
-Tasks:
-• Accept the following inputs for an employee:
-o Name
-o EmpID
-o Basic Monthly Salary
-o Special Allowances (Monthly)
-o Bonus Percentage (Annual Bonus as % of Monthly Gross Salary)
-• Calculate:
-o Gross Monthly Salary = Basic Salary + Special Allowances
-o Annual Gross Salary = (Gross Monthly Salary × 12) + Bonus
-• Output:
-o Display the employee details, gross monthly salary, and annual gross salary.
 
-Level2:
-Level 2: Taxable Income Calculation
-Objective: Calculate taxable income after standard deductions.
-Tasks:
-• Deduct a Standard Deduction of ₹50,000 from the annual gross salary.
-• Compute the Taxable Income and display all intermediate calculations.
-Output: Display gross salary, standard deduction and taxable income.
 
-Level 3: Tax and Rebate Calculation
-Objective: Compute tax payable using the New Tax Regime (2023) slabs.
-Tasks:
-1. Calculate tax based on the following slabs:
-o ₹0 - ₹3,00,000: 0%
-o ₹3,00,001 - ₹6,00,000: 5%
-o ₹6,00,001 - ₹9,00,000: 10%
-o ₹9,00,001 - ₹12,00,000: 15%
-o ₹12,00,001 - ₹15,00,000: 20%
-o Above ₹15,00,000: 30%
-2. Apply Section 87A Rebate:
-o Taxable income ≤ ₹7,00,000 → 100% rebate (tax payable = ₹0).
-3. Add a 4% Health and Education Cess to the calculated tax.
-Output:
-• Display a detailed tax breakdown, including slabs, cess, and total tax payable.
-----------------------------------------
-Level 4: Net Salary Calculation
-Objective: Calculate annual net salary after tax deductions.
-Tasks:
-1. Compute Net Salary = Annual Gross Salary - Total Tax Payable.
-2. Display:
-o Annual Gross Salary
-o Total Tax Payable (including cess)
-o Annual Net Salary
---------------------
-Level 5: Report Generation
-Objective: Generate a detailed report for employees.
-Tasks:
-1. Summarize all computed details:
-o Employee Details (Name, EmpID)
-o Gross Monthly Salary
-o Annual Gross Salary
-o Taxable Income
-o Tax Payable (with breakdown)
-o Annual Net Salary
-2. Format the output as a report for better readability.
-----------------------------------
-Level 6: Input Validation Rules
-Objective: Validate all inputs to ensure accuracy and correctness.
-Validation Rules:
-1. Employee Details:
-o Name: Non-empty, alphabets only, max 50 characters.
-o EmpID: Alphanumeric, 5–10 characters.
-2. Salary Inputs:
-o Basic Salary: Positive number, max ₹1,00,00,000.
-o Special Allowances: Non-negative, max ₹1,00,00,000.
-o Bonus Percentage: Numeric value, 0–100.
-3. Derived Calculations:
-o Gross Monthly Salary must be greater than zero.
-o Annual Gross Salary should not exceed realistic values.
-4. General:
-o Reject invalid inputs with a clear error message.
-o Provide re-entry prompts for invalid data.
--------------------------------------------------------
 Farmer Problem Statement
 Mahesh is a farmer and owns 80 acres of land. His land is equally divided into 5 segments.
 He grows tomatoes in the 1st segment, potatoes in the 2nd segment, cabbage in the 3rd segment, sunflower in the 4th segment and sugarcane in the 5th segment.
